@@ -24,6 +24,9 @@ tasks.named('test') {
 
 //일반 Jar 생성
 task buildJar(type: Jar) {
+    compileJava{
+        options.encoding = "utf-8"
+    }
     manifest {
         attributes 'Main-Class': 'hello.embed.EmbedTomcatSpringMain'
     }
@@ -32,6 +35,9 @@ task buildJar(type: Jar) {
 
 //Fat Jar 생성
 task buildFatJar(type: Jar) {
+    compileJava{
+        options.encoding = "utf-8"
+    }
     manifest {
         attributes 'Main-Class': 'hello.embed.EmbedTomcatSpringMain'
     }
